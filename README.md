@@ -1,0 +1,2 @@
+# Chi-Squared Test
+Basic implementation of performing a chi-squared test. The p-value code is from [here](https://docs.microsoft.com/en-us/archive/msdn-magazine/2017/march/test-run-chi-squared-goodness-of-fit-using-csharp).

@@ -20,5 +20,21 @@ namespace chi_squared_test.Tests
             Assert.Equal(2, result.DegreesOfFreedom);
             Assert.Equal(0.1608, Math.Round(result.PValue, 4));
         }
+
+        [Fact]
+        public void MultipleChoiceAnswersTest()
+        {
+            // ARRANGE
+            int[] observations = new int[] { 20, 20, 25, 35 };
+            double[] probabilities = new double[] { 1.0 / 4, 1.0 / 4, 1.0 / 4, 1.0 / 4 };
+
+            // ACT
+            ChiSquaredTestResult result = ChiSquaredTest.Run(observations, probabilities);
+
+            // ASSERT
+            Assert.Equal(6, Math.Round(result.ChiSquaredValue, 4));
+            Assert.Equal(3, result.DegreesOfFreedom);
+            Assert.Equal(0.1116, Math.Round(result.PValue, 4));
+        }
     }
 }
